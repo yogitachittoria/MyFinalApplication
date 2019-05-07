@@ -177,5 +177,5 @@ public class HomeActivity extends AppCompatActivity {
             // permissions this app might request.
         }
     }
-    
+
 }

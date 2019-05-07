@@ -87,7 +87,7 @@ public class Studenthelper extends SQLiteOpenHelper {
             return false;
 
     }
-    public List<Student> getallStudentdetails()
+   /* public List<Student> getallStudentdetails()
     {
         SQLiteDatabase db=this.getReadableDatabase();
         String query="select * from "+TABLE_NAME;
@@ -99,13 +99,20 @@ public class Studenthelper extends SQLiteOpenHelper {
             while(cursor.moveToNext()) {
                 // 4. build Student object
                 Student p = new Student();
-               /* p.setId(cursor.getInt(0));
+               *//* p.setId(cursor.getInt(0));
                 p.setStudentname(cursor.getString(1));
                 p.setPassword(cursor.getString(3));
                 p.setEmail(cursor.getString(2));
-                //add the Student object to list*/
+                //add the Student object to list*//*
                 list.add(p);
             }}
         return list;
+    }
+   */
+   public Cursor getAllData() {
+        String selectQuery = "Select * from "+TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        return cursor;
     }
 }
